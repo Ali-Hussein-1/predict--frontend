@@ -5,8 +5,23 @@
   }
 
   .img_contaner{
-    background-color: #eeeeee;
-	border: 1px solid black;
-    height: 200px;
-	width: 150px;
+    background-color: lightgrey;
+  width: 300px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+  }
+  h2{
+    text-align: center;
+  }
+  .flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #sbtn{
+    padding: 15px 10px
+    background-color: blue;
+    color: black;
+    border-radius: 10px;
   }
