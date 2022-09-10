@@ -3,25 +3,25 @@
     padding: 0;
     box-sizing: border-box;
   }
+img{
+    height: 300px;
+    width: 200px;
+    border: 5px solid black;
+}  
 
-  .img_contaner{
-    background-color: lightgrey;
-  width: 300px;
-  border: 15px solid green;
-  padding: 50px;
-  margin: 20px;
-  }
-  h2{
+h2{
     text-align: center;
-  }
-  .flex{
+    margin-bottom: 30px;
+    }
+.flex{
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  #sbtn{
-    padding: 15px 10px
-    background-color: blue;
+    }
+#btn{
+    padding: 15px 50px;
+    background-color: lightblue;
     color: black;
-    border-radius: 10px;
-  }
+    border-radius: 20px;
+    margin: 30px;
+    }
