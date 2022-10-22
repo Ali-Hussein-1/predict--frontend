@@ -7,15 +7,13 @@ const gender_url = "https://api.genderize.io?name=";
 const age_url = "https://api.agify.io/?name=";
 const nat_url = "https://api.nationalize.io/?name=";
 
-// displaying the image
-fetch("https://dog.ceo/api/breeds/image/random")
-  .then((response) => response.json())
-  .then(function (data) {
-    display(data.message);
+// fetching a random dog image
+fetch(img_url)
+  .then((res) => res.json())
+  .then((data) => {
+    console.log(data.message);
+    document.getElementById("image").src = data.message;
   });
-function display(image_url) {
-  document.getElementById("image").src = image_url;
-}
 
 // click event on the button to get age name and gender
 btn.addEventListener("click", get_name);
