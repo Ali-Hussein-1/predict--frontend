@@ -2,6 +2,9 @@
 const btn = document.querySelector("#btn");
 const para = document.querySelector("#para");
 var test;
+const age = document.getElementById("age");
+const gender = document.getElementById("gender");
+const nat = document.getElementById("nat");
 const img_url = "https://dog.ceo/api/breeds/image/random";
 const gender_url = "https://api.genderize.io?name=";
 const age_url = "https://api.agify.io/?name=";
