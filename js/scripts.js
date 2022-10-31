@@ -50,6 +50,6 @@ function getNat() {
       } else {
         nat_id = `the first nationality is ${country[0].country_id} and the second is ${country[1].country_id}`;
       }
-      console.log(nat_id);
+      nat.innerHTML += nat_id;
     });
 }
