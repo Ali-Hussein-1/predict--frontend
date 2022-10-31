@@ -24,7 +24,7 @@ function get_name() {
   test2 = test.value;
   getAge();
   getGender();
-  // getNat();
+  getNat();
 }
 // getting the gender
 function getGender() {
@@ -39,20 +39,17 @@ function getAge() {
     .then((data) => console.log(data.age));
 }
 // getting the nationality
-// function getNat() {
-//   fetch("https://api.nationalize.io/?name=" + test.value)
-//     .then((response) => response.json())
-//     .then((data) => console.log(data.country));
-// }
-//   .then((data) => {
-//     let country= data.country
-//     let nat_id = country[0].country_id
-//     if (country.length==1){
-//         nat_id=country[0].country_id
-//     }
-//     else{
-//         nat_id = "the first nationality is" + country[0].country_id + "and the second is " + country[1].country_id
-//     }
-//     console.log(nat_id)
-//   })
-// }
+function getNat() {
+  fetch(`https://api.nationalize.io/?name=${test.value}`)
+    .then((response) => response.json())
+    .then((data) => {
+      let country = data.country;
+      let nat_id = country[0].country_id;
+      if (country.length == 1) {
+        nat_id = country[0].country_id;
+      } else {
+        nat_id = `the first nationality is ${country[0].country_id} and the second is ${country[1].country_id}`;
+      }
+      console.log(nat_id);
+    });
+}
