@@ -30,7 +30,7 @@ function get_name() {
 function getGender() {
   fetch(`https://api.genderize.io?name=${test.value}`)
     .then((response) => response.json())
-    .then((data) => console.log(data.gender));
+    .then((data) => (gender.innerHTML += data.gender));
 }
 // getting the age
 function getAge() {
