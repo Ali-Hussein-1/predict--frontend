@@ -30,13 +30,19 @@ function get_name() {
 function getGender() {
   fetch(`https://api.genderize.io?name=${test.value}`)
     .then((response) => response.json())
-    .then((data) => (gender.innerHTML += data.gender));
+    .then(
+      (data) =>
+        (gender.innerHTML += `${test.value}'s predicted gender is  ${data.gender}`)
+    );
 }
 // getting the age
 function getAge() {
   fetch(`https://api.agify.io/?name=${test.value}`)
     .then((res) => res.json())
-    .then((data) => (age.innerHTML += data.age));
+    .then(
+      (data) =>
+        (age.innerHTML += `${test.value}'s predicted age is  ${data.age}`)
+    );
 }
 // getting the nationality
 function getNat() {
@@ -48,8 +54,8 @@ function getNat() {
       if (country.length == 1) {
         nat_id = country[0].country_id;
       } else {
-        nat_id = `the first nationality is ${country[0].country_id} and the second is ${country[1].country_id}`;
+        nat_id = `first nationality is ${country[0].country_id} and the second is ${country[1].country_id}`;
       }
-      nat.innerHTML += nat_id;
+      nat.innerHTML += `${test.value}'s ${nat_id}`;
     });
 }

@@ -9,7 +9,7 @@
 img{
     height: 300px;
     width: 200px;
-    border: 5px solid black;
+    border: 1px solid black;
     border-radius: 10px;
 }  
 
@@ -33,6 +33,30 @@ h2{
     padding: 15px 50px;
     background-color: lightblue;
     color: black;
+    border: 1px solid black;
     border-radius: 20px;
     margin: 30px;
     }
+#btn:hover{
+    background-color: steelblue;
+    color: white;
+    }
+
+input{
+    height: 50px;
+    width: 300px;
+    padding: 10px;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    margin: 10px;
+    }
+
+.results{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px 0 20px 0;
+}
+
