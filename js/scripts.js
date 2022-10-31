@@ -36,7 +36,7 @@ function getGender() {
 function getAge() {
   fetch(`https://api.agify.io/?name=${test.value}`)
     .then((res) => res.json())
-    .then((data) => console.log(data.age));
+    .then((data) => (age.innerHTML += data.age));
 }
 // getting the nationality
 function getNat() {
